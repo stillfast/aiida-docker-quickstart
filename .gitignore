@@ -1,0 +1,61 @@
+# ==============================================================================
+# Git Ignore for AiiDA Docker Quick Start
+# ==============================================================================
+
+# Environment files with sensitive information
+.env.local
+.env.*.local
+
+# Docker volumes (should not be committed)
+pgdata/
+rabbitdata/
+aiida_config/
+aiida_repo/
+sshdata/
+
+# Docker compose override file
+docker-compose.override.yml
+
+# Temporary files
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# SSH keys (NEVER commit these)
+*.pem
+id_rsa*
+*.key
+
+# AiiDA specific
+*.aiida
+.verdi_history
+```
+
+现在添加所有文件并提交：
+<minimax:tool_call>
+<invoke name="RunCommand">
+<parameter name="command">cd "C:/Users/lee/Documents/trae_projects/aiida/install/aiida-docker-quickstart"; git add .gitignore
